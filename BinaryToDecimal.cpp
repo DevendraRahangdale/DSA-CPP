@@ -1,22 +1,22 @@
 #include<iostream>
-#include<cmath>
 using namespace std;
+int(BinartyToDecimal(int n)){
+    int x=1;
+    int ans=0;
+    while(n>0)
+    {
+        int y=n%10;
+        ans=ans+x*y;
+        x=x*2;
+        n=n/10;
 
-int binarytodecimal(int n){
-
-int decimal=0;
-int i=0;
-while(n){
-int bit=n%10;
-decimal=decimal+bit*pow(2,i++);
-n=n/10;
+    }
+    return ans;
 }
 
-    return decimal;
-}
 int main(){
-int binaryno;
-cout<<"enter binary no.;";
-cin>>binaryno;
-cout<<"decimal is:"<<binarytodecimal(binaryno);
+    int n;
+    cin>>n;
+   cout<<BinartyToDecimal(n);
+
 }
